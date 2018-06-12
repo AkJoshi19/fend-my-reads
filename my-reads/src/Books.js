@@ -5,13 +5,14 @@ class Books extends Component {
 		return (
 			// Complete list of books
 			<ul className='books-list'>
+			{console.log(this.props.books)}
 				{this.props.books.map((book) => (
 					// One book item
 					<li key={book.id} className='book-item'>
 						<h2>{book.title}</h2>
-						<h3>{book.author}</h3>
+						<h3>{book.authors}</h3>
 						<div className='book-info'>
-							<img src={book.cover} alt={book.title} />
+							<img src={book.imageLinks.smallThumbnail} alt={book.title} />
 							<div className='book-btns'>
 								<button>Currently Reading</button>
 								<button>Wants to read</button>
