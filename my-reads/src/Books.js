@@ -5,8 +5,11 @@ class Books extends Component {
 		return (
 			// Complete list of books
 			<ul className='books-list'>
+			<h2>{this.props.title}</h2>
 			{console.log(this.props.books)}
-				{this.props.books.map((book) => (
+				{this.props.books
+					.filter(book => book.shelf === this.props.shelf)
+					.map((book) => (
 					// One book item
 					<li key={book.id} className='book-item'>
 						<h2>{book.title}</h2>

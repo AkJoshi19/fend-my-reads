@@ -16,7 +16,21 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Books books={this.state.books} />
+        <Books 
+          books={this.state.books} 
+          shelf='currentlyReading' 
+          title='Currently Reading'
+        />
+        <Books 
+          books={this.state.books} 
+          shelf='wantToRead' 
+          title='Want To Read'
+        />
+        <Books 
+          books={this.state.books} 
+          shelf='read' 
+          title='Read'
+        />
       </div>
     );
   }
