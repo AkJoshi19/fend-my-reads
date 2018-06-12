@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 
 class BookList extends React.Component {
   render() {
-    const books = [
-      { title: 'book1' },
-      { title: 'book2' },
-      { title: 'book3' }
-    ]
+    const books = this.props.items;
 
     return <ol>
       {books.map(book => (
@@ -20,7 +16,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <BookList />
+        <BookList items={[
+          { title: 'book1' },
+          { title: 'book2' },
+          { title: 'book3' }
+        ]}/>
       </div>
     );
   }
