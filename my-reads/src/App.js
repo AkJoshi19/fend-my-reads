@@ -13,6 +13,12 @@ class App extends Component {
     })
   }
 
+  moveContact(book, shelf) {
+    BooksAPI.update(book, shelf).then(books => {
+      this.setState({ books })
+    })
+  }
+
   render() {
     return (
       <div>
@@ -20,16 +26,19 @@ class App extends Component {
           books={this.state.books} 
           shelf='currentlyReading' 
           title='Currently Reading'
+          onMoveBook={this.moveContact}
         />
         <Books 
           books={this.state.books} 
           shelf='wantToRead' 
           title='Want To Read'
+          onMoveBook={this.moveContact}
         />
         <Books 
           books={this.state.books} 
           shelf='read' 
           title='Read'
+          onMoveBook={this.moveContact}
         />
       </div>
     );

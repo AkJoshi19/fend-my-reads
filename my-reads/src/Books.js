@@ -18,10 +18,10 @@ class Books extends Component {
 						<div className='book-info'>
 							<img src={book.imageLinks.smallThumbnail} alt={book.title} />
 							<div className='book-btns'>
-								<button>Currently Reading</button>
-								<button>Wants to read</button>
-								<button>Read</button>
-								<button>None</button>
+								<button onClick={() => this.props.onMoveBook(book, 'currentlyReading')}>Currently Reading</button>
+								<button onClick={() => this.props.onMoveBook(book, 'wantToRead')}>Wants to read</button>
+								<button onClick={() => this.props.onMoveBook(book, 'read')}>Read</button>
+								<button onClick={() => this.props.onMoveBook(book, '')}>None</button>
 							</div>
 						</div>
 					</li>
