@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Books from './Books'
+import escapeRegExp from 'escape-string-regexp'
+import sortBy from 'sort-by'
 
 class SearchBook extends Component {
 	state = {
