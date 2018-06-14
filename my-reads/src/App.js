@@ -23,7 +23,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Books 
+        <SearchBook />
+        {/*<Books 
           books={this.state.books} 
           shelf='currentlyReading' 
           title='Currently Reading'
@@ -40,7 +41,7 @@ class App extends Component {
           shelf='read' 
           title='Read'
           onMoveBook={this.moveContact}
-        />
+        />*/}
       </div>
     );
   }
