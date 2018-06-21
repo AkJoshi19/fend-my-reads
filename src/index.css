@@ -1,5 +1,26 @@
-body {
+/* GENERAL */
+/* ---------------------------------- */
+* {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+	background: #494a4e;
+}
+
+/* HEADER */
+/* ---------------------------------- */
+.main-header {
+	text-align: center;
+	margin: 0 2%;
+	border-bottom: 1px solid #818181;
+}
+
+.main-header h1 {
+	text-transform: uppercase;
+	color: #fff;
+	padding: 10px 0;
 }
