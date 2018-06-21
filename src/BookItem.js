@@ -1,5 +1,7 @@
 import React from 'react'
 
+import MoveShelfButton from './MoveShelfButton'
+
 function BookItem(props) {
 	return (
 		<article className="book-item">
@@ -12,6 +14,10 @@ function BookItem(props) {
 					alt="Book Name"
 				/>
 				<div className="book-interaction">
+					<MoveShelfButton shelfName="Reading" />
+					<MoveShelfButton shelfName="Want to" />
+					<MoveShelfButton shelfName="Read" />
+					<MoveShelfButton shelfName="None" />
 				</div>
 			</div>
 		</article>
