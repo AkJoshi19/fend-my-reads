@@ -211,3 +211,9 @@ body {
 	color: #fff;
 	text-decoration: underline;
 }
+
+/* SEARCH PAGE */
+/* ---------------------------------- */
+.search-page {
+	padding: 20px 10px 100px 10px;
+}

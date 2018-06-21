@@ -4,14 +4,14 @@ import Header from './Header'
 import FooterNav from './FooterNav'
 import MainPage from './MainPage'
 
-import SearchInput from './SearchInput'
+import SearchPage from './SearchPage'
 
 class App extends Component {
   render () {
     return (
       <div className="full-app">
         <Header />
-        <SearchInput />
+        <SearchPage />
         <FooterNav />
       </div>
     );
