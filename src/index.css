@@ -60,3 +60,37 @@ body {
 .nav-link:nth-child(1) {
 	border-right: 1px solid #ff6008;
 }
+
+/* BOOK ITEM */
+/* ---------------------------------- */
+.book-item {
+	width: 100%;
+	padding: 10px 0 0 0;
+	border: 1px solid black;
+	background: #333333;
+}
+
+.book-item h3,
+.book-item p {
+	text-align: center;
+	padding: 0 0 10px 0;
+}
+
+.book-item h3 {
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.book-item p {
+	color: #737373;
+	font-style: italic;
+}
+
+.book-main-display {
+	background: #fff;
+	padding: 2%;
+}
+
+.book-main-display img {
+	width: 40%;
+}
