@@ -150,3 +150,9 @@ body {
 .book-items-container {
 	padding: 0 10px;
 }
+
+/* MAIN PAGE */
+/* ---------------------------------- */
+.main-page {
+	padding: 0 2% 100px 2%;
+}
