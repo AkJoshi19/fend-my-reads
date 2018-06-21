@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className="full-app">
         <Header />
-        <SearchPage />
+        <MainPage />
         <FooterNav />
       </div>
     );

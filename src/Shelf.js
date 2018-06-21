@@ -12,6 +12,9 @@ function Shelf(props) {
 			<div className="book-items-container">
 				<BookItem />
 				<BookItem />
+				<BookItem />
+				<BookItem />
+				<BookItem />
 			</div>
 		</section>
 	);
