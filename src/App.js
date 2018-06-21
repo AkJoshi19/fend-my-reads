@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom'
 
 import Header from './Header'
 import FooterNav from './FooterNav'
@@ -11,7 +12,10 @@ class App extends Component {
     return (
       <div className="full-app">
         <Header />
-        <MainPage />
+        
+        <Route exact path="/" component={MainPage} />
+        <Route path="/search" component={SearchPage} />
+
         <FooterNav />
       </div>
     );
