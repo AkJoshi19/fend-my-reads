@@ -66,6 +66,7 @@ class App extends Component {
             <SearchPage 
               books={searchedBooks}
               updateSearchedBooks={this.updateSearchedBooks}
+              changeShelf={this.changeShelf}
             />
           )}
         />

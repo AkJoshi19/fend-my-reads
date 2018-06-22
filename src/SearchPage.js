@@ -5,7 +5,7 @@ import SearchInput from './SearchInput'
 import BookItem from './BookItem'
 
 function SearchPage(props) {
-	const { books, updateSearchedBooks } = props;
+	const { books, updateSearchedBooks, changeShelf } = props;
 
 	return (
 		<div className="search-page">
@@ -14,7 +14,10 @@ function SearchPage(props) {
 			<ul className="search-books-container">
 				{books.map((book) => (
 					<li key={book.id}>
-						<BookItem book={book} />
+						<BookItem 
+							book={book}
+							changeShelf={changeShelf}
+						/>
 					</li>
 				))}
 			</ul>
@@ -24,7 +27,8 @@ function SearchPage(props) {
 
 SearchPage.propTypes = {
 	books: PropTypes.array.isRequired,
-	updateSearchedBooks: PropTypes.func.isRequired
+	updateSearchedBooks: PropTypes.func.isRequired,
+	changeShelf: PropTypes.func.isRequired
 }
 
 export default SearchPage
