@@ -14,7 +14,7 @@ function BookItem(props) {
 
 			<div className="book-main-display">
 				<img
-					src={book.imageLinks.thumbnail}
+					src={'https://images.pexels.com/photos/380337/pexels-photo-380337.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'}
 					alt={book.title}
 				/>
 				<div className="book-interaction">
