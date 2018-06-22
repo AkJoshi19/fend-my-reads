@@ -8,6 +8,13 @@ import MainPage from './MainPage'
 import SearchPage from './SearchPage'
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      displayedBooks: []
+    };
+  }
+
   render () {
     return (
       <div className="full-app">
