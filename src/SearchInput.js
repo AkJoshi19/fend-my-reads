@@ -38,7 +38,6 @@ class SearchInput extends Component {
 					/>
 					<button className="validate-form">OK</button>
 				</form>
-				{JSON.stringify(this.state)}
 			</div>
 		);
 	};

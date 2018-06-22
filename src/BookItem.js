@@ -18,10 +18,26 @@ function BookItem(props) {
 					alt={book.title}
 				/>
 				<div className="book-interaction">
-					<MoveShelfButton shelfName="Reading" />
-					<MoveShelfButton shelfName="Want to" />
-					<MoveShelfButton shelfName="Read" />
-					<MoveShelfButton shelfName="None" />
+					<MoveShelfButton 
+						shelfName="Reading"
+						currentShelf={book.shelf}
+						shelf="currentlyReading"
+					/>
+					<MoveShelfButton 
+						shelfName="Want to"
+						currentShelf={book.shelf}
+						shelf="wantToRead"
+					/>
+					<MoveShelfButton 
+						shelfName="Read"
+						currentShelf={book.shelf}
+						shelf="read"
+					/>
+					<MoveShelfButton 
+						shelfName="None"
+						currentShelf={book.shelf}
+						shelf={undefined}
+					/>
 				</div>
 			</div>
 		</article>

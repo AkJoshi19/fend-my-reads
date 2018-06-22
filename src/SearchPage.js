@@ -12,7 +12,6 @@ function SearchPage(props) {
 			<SearchInput updateSearchedBooks={updateSearchedBooks} />
 
 			<ul className="search-books-container">
-				{console.log(books)}
 				{books.map((book) => (
 					<li key={book.id}>
 						<BookItem book={book} />

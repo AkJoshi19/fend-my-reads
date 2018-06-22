@@ -137,6 +137,10 @@ body {
 	border: 3px solid #ff5d00;
 }
 
+.move-shelf-button.active {
+	border-color: #ff5d00;
+}
+
 /* SHELF */
 /* ---------------------------------- */
 .shelf {
