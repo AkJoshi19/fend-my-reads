@@ -4,8 +4,9 @@ import { Route } from 'react-router-dom'
 import Header from './Header'
 import FooterNav from './FooterNav'
 import MainPage from './MainPage'
-
 import SearchPage from './SearchPage'
+
+import * as BooksAPI from './BooksAPI'
 
 class App extends Component {
   constructor(props) {
@@ -13,6 +14,12 @@ class App extends Component {
     this.state = {
       displayedBooks: []
     };
+  }
+
+  componentDidMount() {
+    BooksAPI.getAll().then((books) => {
+      this.setState({ displayedBooks: books })
+    })
   }
 
   render () {
