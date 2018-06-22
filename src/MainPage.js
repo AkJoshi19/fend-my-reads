@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Shelf from './Shelf'
 
@@ -24,6 +25,10 @@ function MainPage(props) {
 	        />
 		</div>
 	);
+}
+
+MainPage.propTypes = {
+	books: PropTypes.array.isRequired
 }
 
 export default MainPage

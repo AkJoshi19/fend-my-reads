@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import escapeRegExp from 'escape-string-regexp'
 import sortBy from 'sort-by'
+import PropTypes from 'prop-types'
 
 class SearchInput extends Component {
 	constructor(props) {
@@ -41,6 +42,10 @@ class SearchInput extends Component {
 			</div>
 		);
 	};
+}
+
+SearchInput.propTypes = {
+	updateSearchedBooks: PropTypes.func.isRequired
 }
 
 export default SearchInput

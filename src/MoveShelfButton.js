@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 function MoveShelfButton(props) {
 	return (
@@ -6,6 +7,15 @@ function MoveShelfButton(props) {
 			{props.shelfName}
 		</button>
 	);
+}
+
+MoveShelfButton.propTypes = {
+	shelfName: PropTypes.oneOf([
+		'Reading',
+		'Want to',
+		'Read',
+		'None'
+	]),
 }
 
 export default MoveShelfButton

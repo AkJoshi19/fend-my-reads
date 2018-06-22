@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import MoveShelfButton from './MoveShelfButton'
 
@@ -25,6 +26,10 @@ function BookItem(props) {
 			</div>
 		</article>
 	);
+}
+
+BookItem.propTypes = {
+	book: PropTypes.object.isRequired
 }
 
 export default BookItem

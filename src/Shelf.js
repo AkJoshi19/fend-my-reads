@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import BookItem from './BookItem'
 
@@ -22,6 +23,20 @@ function Shelf(props) {
 			</ul>
 		</section>
 	);
+}
+
+Shelf.propTypes = {
+	title: PropTypes.oneOf([
+		'Currently Reading',
+		'Want to Read',
+		'Read'
+	]).isRequired,
+	books: PropTypes.array.isRequired,
+	shelf: PropTypes.oneOf([
+		'currentlyReading',
+		'wantToRead',
+		'read'
+	]).isRequired
 }
 
 export default Shelf
