@@ -140,6 +140,7 @@ body {
 /* SHELF */
 /* ---------------------------------- */
 .shelf {
+	min-width: 250px;
 	width: 100%;
 	margin: 20px 0;
 	border: 3px solid #ff5d00;
