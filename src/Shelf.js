@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import BookItem from './BookItem'
 
 function Shelf(props) {
-	const { books, shelf } = props;
+	const { books, shelf, changeShelf } = props;
 
 	return (
 		<section className="shelf">
@@ -17,7 +17,10 @@ function Shelf(props) {
 					.filter((book) => book.shelf === shelf)
 					.map((book) => (
 						<li key={book.id}>
-							<BookItem book={book} />
+							<BookItem 
+								book={book}
+								changeShelf={changeShelf}
+							/>
 						</li>
 				))}
 			</ul>
@@ -36,7 +39,8 @@ Shelf.propTypes = {
 		'currentlyReading',
 		'wantToRead',
 		'read'
-	]).isRequired
+	]).isRequired,
+	changeShelf: PropTypes.func.isRequired
 }
 
 export default Shelf

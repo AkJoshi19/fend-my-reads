@@ -37,6 +37,13 @@ class App extends Component {
     }
   }
 
+  changeShelf = (book, shelf) => {
+    BooksAPI.update(book, shelf);
+    BooksAPI.getAll().then((books) => {
+      this.setState({ displayedBooks: books })
+    })
+  }
+
   render () {
     const { displayedBooks, searchedBooks } = this.state;
 
@@ -47,7 +54,10 @@ class App extends Component {
         <Route 
           exact path="/" 
           render={() => (
-            <MainPage books={displayedBooks} />
+            <MainPage 
+              books={displayedBooks}
+              changeShelf={this.changeShelf}
+            />
           )}
         />
         <Route 

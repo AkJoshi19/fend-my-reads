@@ -2,11 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function MoveShelfButton(props) {
-	const { shelfName, currentShelf, shelf } = props;
+	const { shelfName, currentShelf, shelf, changeShelf, book } = props;
 	const className = (currentShelf === shelf) ? ' active' : '';
 
 	return (
-		<button className={`move-shelf-button${className}`}>
+		<button 
+			className={`move-shelf-button${className}`}
+			onClick={() => changeShelf(book, shelf)}
+		>
 			{shelfName}
 		</button>
 	);
@@ -30,7 +33,9 @@ MoveShelfButton.propTypes = {
 		'wantToRead',
 		'read',
 		undefined
-	])
+	]),
+	changeShelf: PropTypes.func.isRequired,
+	book: PropTypes.object.isRequired
 }
 
 export default MoveShelfButton

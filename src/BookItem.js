@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import MoveShelfButton from './MoveShelfButton'
 
 function BookItem(props) {
-	const { book } = props;
+	const { book, changeShelf } = props;
 
 	return (
 		<article 
@@ -22,21 +22,29 @@ function BookItem(props) {
 						shelfName="Reading"
 						currentShelf={book.shelf}
 						shelf="currentlyReading"
+						changeShelf={changeShelf}
+						book={book}
 					/>
 					<MoveShelfButton 
 						shelfName="Want to"
 						currentShelf={book.shelf}
 						shelf="wantToRead"
+						changeShelf={changeShelf}
+						book={book}
 					/>
 					<MoveShelfButton 
 						shelfName="Read"
 						currentShelf={book.shelf}
 						shelf="read"
+						changeShelf={changeShelf}
+						book={book}
 					/>
 					<MoveShelfButton 
 						shelfName="None"
 						currentShelf={book.shelf}
 						shelf={undefined}
+						changeShelf={changeShelf}
+						book={book}
 					/>
 				</div>
 			</div>
