@@ -242,3 +242,8 @@ body {
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
+
+.search-books-container li {
+	list-style: none;
+	margin: 0 5px;
+}

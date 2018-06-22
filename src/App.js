@@ -12,13 +12,18 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      displayedBooks: []
+      displayedBooks: [],
+      searchedBooks: []
     };
   }
 
   componentDidMount() {
     BooksAPI.getAll().then((books) => {
       this.setState({ displayedBooks: books })
+    })
+
+    BooksAPI.search('linux').then((books) => {
+      this.setState({searchedBooks: books})
     })
   }
 
@@ -33,7 +38,12 @@ class App extends Component {
             <MainPage books={this.state.displayedBooks} />
           )}
         />
-        <Route path="/search" component={SearchPage} />
+        <Route 
+          path="/search" 
+          render={() => (
+            <SearchPage books={this.state.searchedBooks} />
+          )}
+        />
 
         <FooterNav />
       </div>

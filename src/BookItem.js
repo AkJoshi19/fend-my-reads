@@ -11,8 +11,6 @@ function BookItem(props) {
 			<h3>{book.title}</h3>
 			<p>{book.authors}</p>
 
-			{console.log(book)}
-
 			<div className="book-main-display">
 				<img
 					src={book.imageLinks.thumbnail}
