@@ -4,11 +4,11 @@ import SearchInput from './SearchInput'
 import BookItem from './BookItem'
 
 function SearchPage(props) {
-	const { books } = props;
+	const { books, updateSearchedBooks } = props;
 
 	return (
 		<div className="search-page">
-			<SearchInput />
+			<SearchInput updateSearchedBooks={updateSearchedBooks} />
 
 			<ul className="search-books-container">
 				{console.log(books)}

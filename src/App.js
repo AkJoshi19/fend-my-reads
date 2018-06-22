@@ -21,13 +21,17 @@ class App extends Component {
     BooksAPI.getAll().then((books) => {
       this.setState({ displayedBooks: books })
     })
+  }
 
-    BooksAPI.search('linux').then((books) => {
+  updateSearchedBooks = (query) => {
+    BooksAPI.search(query).then((books) => {
       this.setState({searchedBooks: books})
     })
   }
 
   render () {
+    const { displayedBooks, searchedBooks } = this.state;
+
     return (
       <div className="full-app">
         <Header />
@@ -35,13 +39,16 @@ class App extends Component {
         <Route 
           exact path="/" 
           render={() => (
-            <MainPage books={this.state.displayedBooks} />
+            <MainPage books={displayedBooks} />
           )}
         />
         <Route 
           path="/search" 
           render={() => (
-            <SearchPage books={this.state.searchedBooks} />
+            <SearchPage 
+              books={searchedBooks}
+              updateSearchedBooks={this.updateSearchedBooks}
+            />
           )}
         />
 
