@@ -3,15 +3,20 @@ import React from 'react'
 import MoveShelfButton from './MoveShelfButton'
 
 function BookItem(props) {
+	const { book } = props;
+
 	return (
-		<article className="book-item">
-			<h3>Book Title</h3>
-			<p>Book Author</p>
+		<article 
+			className="book-item">
+			<h3>{book.title}</h3>
+			<p>{book.authors}</p>
+
+			{console.log(book)}
 
 			<div className="book-main-display">
 				<img
-					src="https://images.pexels.com/photos/880478/pexels-photo-880478.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-					alt="Book Name"
+					src={book.imageLinks.thumbnail}
+					alt={book.title}
 				/>
 				<div className="book-interaction">
 					<MoveShelfButton shelfName="Reading" />

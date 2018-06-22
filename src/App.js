@@ -27,7 +27,12 @@ class App extends Component {
       <div className="full-app">
         <Header />
         
-        <Route exact path="/" component={MainPage} />
+        <Route 
+          exact path="/" 
+          render={() => (
+            <MainPage books={this.state.displayedBooks} />
+          )}
+        />
         <Route path="/search" component={SearchPage} />
 
         <FooterNav />
