@@ -42,7 +42,7 @@ function BookItem(props) {
 					<MoveShelfButton 
 						shelfName="None"
 						currentShelf={book.shelf}
-						shelf={undefined}
+						shelf='none'
 						changeShelf={changeShelf}
 						book={book}
 					/>

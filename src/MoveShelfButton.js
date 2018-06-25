@@ -3,7 +3,9 @@ import PropTypes from 'prop-types'
 
 function MoveShelfButton(props) {
 	const { shelfName, currentShelf, shelf, changeShelf, book } = props;
-	const className = (currentShelf === shelf) ? ' active' : '';
+	const className = (currentShelf === shelf || 
+		(currentShelf === undefined && shelf === 'none')) ?
+	 ' active' : '';
 
 	return (
 		<button 
@@ -32,7 +34,7 @@ MoveShelfButton.propTypes = {
 		'currentlyReading',
 		'wantToRead',
 		'read',
-		undefined
+		'none'
 	]),
 	changeShelf: PropTypes.func.isRequired,
 	book: PropTypes.object.isRequired

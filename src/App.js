@@ -24,11 +24,14 @@ class App extends Component {
   }
 
   updateSearchedBooks = (query) => {
-    if (query) {
+  if (query) {
       BooksAPI.search(query).then(books => {
         if (books.error) {
           this.setState({ searchedBooks: [] })
         } else {
+          searchedBooksShelf = books.map(book =>
+            book.shelf = this.syncShelf(book)
+          )
           this.setState({ searchedBooks: books })
         }
       })
@@ -42,6 +45,13 @@ class App extends Component {
     BooksAPI.getAll().then((books) => {
       this.setState({ displayedBooks: books })
     })
+  }
+
+  syncShelf = (book) => {
+    let matchingShelf = this.state.displayedBooks.filter(displayedBook =>
+      book.id === displayedBook.id
+    )
+    return matchingShelf.length ? matchingShelf[0].shelf : undefined
   }
 
   render () {
