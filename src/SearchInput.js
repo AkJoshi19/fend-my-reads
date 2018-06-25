@@ -26,7 +26,7 @@ class SearchInput extends Component {
 					to="/"
 					className="back-btn"
 				><i className="fas fa-arrow-left"></i></Link>
-				<form>
+				<form onSubmit={(event) => event.preventDefault()} >
 					<input
 						className="search-input"
 						type="text"
@@ -36,7 +36,6 @@ class SearchInput extends Component {
 							this.updateQuery(event.target.value)
 						}
 					/>
-					<button className="validate-form">OK</button>
 				</form>
 			</div>
 		);

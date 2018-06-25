@@ -24,15 +24,17 @@ class App extends Component {
   }
 
   updateSearchedBooks = (query) => {
-  if (query) {
+    let searchedBooksShelf
+    if (query) {
       BooksAPI.search(query).then(books => {
         if (books.error) {
           this.setState({ searchedBooks: [] })
         } else {
-          searchedBooksShelf = books.map(book =>
-            book.shelf = this.syncShelf(book)
-          )
-          this.setState({ searchedBooks: books })
+          searchedBooksShelf = books.map(book => {
+            book.shelf = this.syncShelf(book);
+            return book;
+          })
+          this.setState({ searchedBooks: searchedBooksShelf })
         }
       })
     } else {
