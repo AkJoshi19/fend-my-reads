@@ -64,7 +64,7 @@ class App extends Component {
         <Header />
         
         <Route 
-          exact path="/" 
+          exact path="/fend-my-reads/" 
           render={() => (
             <MainPage 
               books={displayedBooks}
@@ -73,7 +73,7 @@ class App extends Component {
           )}
         />
         <Route 
-          path="/search" 
+          path="/fend-my-reads/search" 
           render={() => (
             <SearchPage 
               books={searchedBooks}

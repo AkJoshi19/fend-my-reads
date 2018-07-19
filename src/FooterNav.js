@@ -6,12 +6,12 @@ function FooterNav(props) {
 		<footer className="footer-nav">
 			<nav>
 				<Link
-					to="/"
+					to="/fend-my-reads/"
 					className="nav-link"
 				>Home</Link>
 
 				<Link
-					to="/search"
+					to="/fend-my-reads/search"
 					className="nav-link"
 				>Search</Link>
 			</nav>
